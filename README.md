@@ -24,6 +24,12 @@ set ZIP_DIR=~/cs220/bin/do-zip.sh
 
 ## Usage
 
+**GENERALLY JUST USE IT LIKE THIS EXAMPLE**
+```bat
+submit.bat lab9 -g        :: submit and commit to GitHub
+```
+**^^^^^^^^^^^^^^**
+
 ```bat
 submit.bat [lab name] [-g] [-nz]
 ```
