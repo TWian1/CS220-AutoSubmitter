@@ -6,7 +6,9 @@ A Windows batch script that handles the submission and completion of labs for CS
 
 Download `submit.bat` onto your computer
 
-Open `submit.bat` in a text editor and edit the two variables at the top and the two at the bottom **IF NECESSARY**:
+Open `submit.bat` in a text editor and edit the two variables at the top:
+
+**IF NECESSARY** also edit the two at the bottom 
 
 ```bat
 set OUT_DIR=C:\Users\user\Downloads\labs
