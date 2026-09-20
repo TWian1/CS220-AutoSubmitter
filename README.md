@@ -26,6 +26,8 @@ set ZIP_DIR=~/cs220/bin/do-zip.sh
 
 ## Usage
 
+Connect to the BU VPN
+
 **GENERALLY JUST USE IT LIKE THIS EXAMPLE**
 ```bat
 submit.bat lab9 -g        :: submit and commit to GitHub
