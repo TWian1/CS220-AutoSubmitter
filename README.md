@@ -56,3 +56,8 @@ submit.bat lab9 -ng -nz    :: skips commit, skip re-zipping
 - **`-nz` is not absolute.** The lab is still zipped if no zip exists yet, or if the `README.md` had to be created on that run — otherwise there'd be nothing to copy down.
 - **The README is only created once.** If `README.md` already exists it's left alone, header included.
 - **Git must already be set up** in the lab directory for commiting to work. A failed push shows up as the generic `Remote zip step failed.` message.
+- Modify these values if they do not point to the correct spots:
+```bat
+set IN_DIR=~/i220/submit/%~1-sol
+set ZIP_DIR=~/cs220/bin/do-zip.sh
+```
