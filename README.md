@@ -29,7 +29,7 @@ submit.bat lab9        :: submit and commit to GitHub
 **^^^^^^^^^^^^^^**
 
 ```bat
-submit.bat [lab name] [-ng] [-nz]
+submit [lab name] [-ng] [-nz]
 ```
 
 The lab name is given **without** the `-sol` suffix — the script appends it. Flags are optional and can go in either order.
@@ -43,12 +43,12 @@ The lab name is given **without** the `-sol` suffix — the script appends it. F
 ### Examples
 
 ```bat
-submit.bat lab9         :: submit and commit to GitHub
+submit lab9         :: submit and commit to GitHub
 
 
-submit.bat lab2 -ng       :: submit without commiting normally
-submit.bat lab4 -nz       :: copy down without re-zipping, commits
-submit.bat lab9 -ng -nz    :: skips commit, skip re-zipping
+submit lab2 -ng       :: submit without commiting normally
+submit lab4 -nz       :: copy down without re-zipping, commits
+submit lab9 -ng -nz    :: skips commit, skip re-zipping
 ```
 
 ## Caveats
