@@ -24,7 +24,7 @@ Connect to the BU VPN
 
 **GENERALLY JUST USE IT LIKE THIS EXAMPLE**
 ```bat
-submit.bat lab9        :: submit and commit to GitHub
+submit lab9        :: submit and commit to GitHub
 ```
 **^^^^^^^^^^^^^^**
 
