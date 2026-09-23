@@ -9,7 +9,7 @@ set SSH_USR=username
 set IN_DIR=~/i220/submit/%~1-sol
 set ZIP_DIR=~/cs220/bin/do-zip.sh
 if "%~1"=="" (
-    echo Please provide a lab name. FORMAT: %~nx0 ^[LabName ^(ex: lab4, lab2^)^] ^[-ng ^(OPTIONAL: Skips committing to github^)^] ^[-nz ^(OPTIONAL: Skips rezipping^)^]
+    echo Please provide a lab name. FORMAT: %~n0 ^[LabName ^(ex: lab4, lab2^)^] ^[-ng ^(OPTIONAL: Skips committing to github^)^] ^[-nz ^(OPTIONAL: Skips rezipping^)^]
     pause
     exit /b 1
 )
