@@ -2,6 +2,7 @@
 setlocal
 
 set SSH_USR=username
+
 set LAB_DIR=~/i220/submit
 set CS_DIR=~/cs220
 
