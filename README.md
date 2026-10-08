@@ -43,3 +43,45 @@ submit [lab name] [-ng] [-nz]
 set IN_DIR=~/i220/submit/%~1-sol
 set ZIP_DIR=~/cs220/bin/do-zip.sh
 ```
+
+# CS 220 Auto starter
+
+A Windows batch script that automatically runs through the generic startup directions and commits to github.
+
+## Installation
+
+Download `startlab.bat` onto your computer
+
+Open `startlab.bat` in a text editor and edit the variable at the top:
+
+```bat
+set SSH_USR=username
+```
+
+| Variable | What to set it to |
+| --- | --- |
+| `SSH_USR` | Your SSH username. |
+
+## Usage
+
+Connect to the BU VPN
+
+**GENERALLY JUST USE IT LIKE THIS EXAMPLE**
+```bat
+startlab lab9        :: start and commit to GitHub
+```
+**^^^^^^^^^^^^^^**
+
+```bat
+startlab [lab name] [-ng]
+```
+| Argument | Effect |
+| --- | --- |
+| `lab name` | The lab to start (for example `lab2`, `lab4`, `lab9`). |
+| `-ng` | Skip committing the lab as `started <lab name>` and push to GitHub. |
+
+- Modify these values if they do not point to the correct spots:
+```bat
+set LAB_DIR=~/i220/submit
+set CS_DIR=~/cs220
+```
