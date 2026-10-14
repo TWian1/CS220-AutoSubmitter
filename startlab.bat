@@ -13,14 +13,8 @@ if "%~1"=="" (
 )
 set GITCOMMIT=1
 if /i "%~2"=="-ng" set GITCOMMIT=0
-ssh %SSH_USR%@remote.cs.binghamton.edu "test -d %LAB_DIR%/%~1-sol"
-if %errorlevel%==0 (
-    echo Lab already exists.
-    pause
-    exit /b 1
-)
+ssh %SSH_USR%@remote.cs.binghamton.edu "if [ -d %LAB_DIR%/%~1-sol ]; then echo 'Lab already exists.'; exit 1; fi; cd %CS_DIR% && git pull && cd %LAB_DIR% && git pull && cp -r %CS_DIR%/*/%~1/%~1-sol . && cd %~1-sol && if [ %GITCOMMIT% -eq 1 ]; then git add . && if git diff --cached --quiet; then echo 'Nothing new to commit.'; else git commit -m 'started %~1'; fi && git push; fi"
 
-ssh %SSH_USR%@remote.cs.binghamton.edu "cd %CS_DIR% && git pull && cd %LAB_DIR% && git pull && cp -r ~/cs220/*/%~1/%~1-sol . && cd %~1-sol && if [ %GITCOMMIT% -eq 1 ]; then git add . && if git diff --cached --quiet; then echo 'Nothing new to commit.'; else git commit -m 'started %~1'; fi && git push; fi"
 if errorlevel 1 (
     echo Remote step failed.
     pause
